@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Auto Group Tabs by Domain",
+  "version": "0.2.0",
+  "description": "Groups tabs by domain or custom categories.",
+  "permissions": ["tabs", "tabGroups", "storage"],
+  "host_permissions": ["<all_urls>"],
+  "background": { "service_worker": "background.js", "type": "module" },
+  "commands": {
+    "reapply-grouping": {
+      "suggested_key": { "default": "Ctrl+Shift+Y", "mac": "Command+Shift+Y" },
+      "description": "Re-group all tabs now"
+    }
+  },
+  "options_ui": { "page": "options.html", "open_in_tab": true }
+}
